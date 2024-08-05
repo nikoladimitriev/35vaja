@@ -5,7 +5,7 @@
  * Program z grafičnim uporabniškim vmesnikom za delo s škatlami. 
  * Omogoča dodajanje in odstranjevanje škatel ter prikazovanje vsebine.
  * @autor Nikola Dimitriev
- * @version Vaja 35
+ * @version Vaja 35 TESTT
  */
 
 import javax.swing.*;
