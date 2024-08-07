@@ -5,7 +5,7 @@
  * Vmesnik za objekte, ki omogočajo shranjevanje predmetov.
  * 
  * @author Nikola Dimitriev
- * @version Vaja 35
+ * @version Vaja 36 
  */
 
 public interface Shranjevanje {

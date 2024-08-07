@@ -2,50 +2,49 @@
  * SkatlaZaElektroniko.java
  *
  * Opis:
- * Delo s škatlo za elektroniko
+ * Razred za delo s škatlo za elektroniko.
  * 
- * @author Nikola Dimitriev
- * @version Vaja 35
- 
+ * @autor Nikola Dimitriev
+ * @version Vaja 36 
  */
 
 /**
- * Javni razred za škatlo za elektroniko, ki je podrazred razreda Skatla.
- * Ta razred dodaja dodatno lastnost za napetost, ki je pomembna za elektroniko.
+ * Javni razred SkatlaZaElektroniko za opis škatle za elektroniko.
  */
 public class SkatlaZaElektroniko extends Skatla {
     
-	// Napetost, ki jo zahteva elektronika v škatli
-	private int napetost;
+    // Deklaracija privatne lastnosti
+    private int napetost;
 
-	
     /**
-     * Konstruktor za ustvarjanje objekta SkatlaZaElektroniko.
+     * Konstruktor razreda SkatlaZaElektroniko.
      * 
-     * @param v    Volumen škatle v cm^3
-     * @param b    Barva škatle
-     * @param vseb Vsebina škatle
-     * @param n    Napetost, ki jo zahteva elektronika v škatli (v voltih)
+     * @param volumen prostornina škatle
+     * @param barva barva škatle
+     * @param vsebina vsebina škatle
+     * @param napetost napetost škatle
      */
-    public SkatlaZaElektroniko(int v, String b, String vseb, int n) {
-        super(v, b, vseb);
-        napetost = n;
+    public SkatlaZaElektroniko(int volumen, String barva, String vsebina, int napetost) {
+        super(volumen, barva, vsebina);
+        this.napetost = napetost;
     }
 
-	 /**
-     * Metoda za izpis napetosti, ki jo zahteva elektronika v škatli.
-     */
-    public void pokaziNapetost() {
-        System.out.println("Elektronika v škatli zahteva napetost: " + napetost + "V");
-    }
-
-	 /**
-     * Metoda za pridobivanje napetosti, ki jo zahteva elektronika v škatli.
+    /**
+     * Metoda za pridobitev napetosti škatle.
      * 
-     * @return Napetost v voltih
+     * @return napetost škatle
      */
     public int getNapetost() {
         return napetost;
     }
-	
+
+    /**
+     * Metoda za prikaz vsebine škatle.
+     * 
+     * @return String, ki predstavlja vsebino škatle
+     */
+    @Override
+    public String prikaziVsebino() {
+        return getVsebina();
+    }
 }

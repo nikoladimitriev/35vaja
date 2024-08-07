@@ -5,54 +5,63 @@
  * Abstraktni razred za delo s škatlo.
  * 
  * @author Nikola Dimitriev
- * @version Vaja 35
+ * @version Vaja 36 
  */
 
 /**
- * Javni razred Skatla, ki predstavlja splošni model škatle z določenimi atributi.
+ * Javni razred Skatla za opis škatle.
  */
-public class Skatla {
+public abstract class Skatla {
+    
+    // Deklaracija privatnih lastnosti škatle
     private int volumen;
     private String barva;
     private String vsebina;
-
-	 /**
-     * Konstruktor za ustvarjanje objekta Skatla.
+    
+    /**
+     * Konstruktor razreda Skatla.
      * 
-     * @param v      Volumen škatle v cm^3
-     * @param b      Barva škatle
-     * @param vseb   Vsebina škatle
+     * @param volumen prostornina škatle
+     * @param barva barva škatle
+     * @param vsebina vsebina škatle
      */
-    public Skatla(int v, String b, String vseb) {
-        volumen = v;
-        barva = b;
-        vsebina = vseb;
-        System.out.println("Ustvarjam objekt tipa Skatla z volumnom " + v + " cm^3, barvo " + b + " in vsebino " + vseb);
+    public Skatla(int volumen, String barva, String vsebina) {
+        this.volumen = volumen;
+        this.barva = barva;
+        this.vsebina = vsebina;
     }
-	 /**
-     * Metoda za pridobivanje volumna škatle.
+
+    /**
+     * Metoda za pridobitev volumena škatle.
      * 
-     * @return Volumen škatle v cm^3
+     * @return volumen škatle
      */
     public int getVolumen() {
         return volumen;
     }
-	
-	/**
-     * Metoda za pridobivanje barve škatle.
+
+    /**
+     * Metoda za pridobitev barve škatle.
      * 
-     * @return Barva škatle kot niz
+     * @return barva škatle
      */
     public String getBarva() {
         return barva;
     }
 
-	/**
-     * Metoda za prikazovanje vsebine škatle.
+    /**
+     * Metoda za pridobitev vsebine škatle.
      * 
-     * @return Vsebina škatle kot niz
+     * @return vsebina škatle
      */
-    public String prikaziVsebino() {
+    public String getVsebina() {
         return vsebina;
     }
+
+    /**
+     * Abstraktna metoda za prikaz vsebine škatle.
+     * 
+     * @return String, ki predstavlja vsebino škatle
+     */
+    public abstract String prikaziVsebino();
 }

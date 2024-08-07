@@ -5,7 +5,7 @@
  * Razred za model tabele, ki prikazuje seznam škatel v grafičnem uporabniškem vmesniku.
  * 
  * @author Nikola Dimitriev
- * @version Vaja 35
+ * @version Vaja 36 
  */
 
 import javax.swing.table.DefaultTableModel;

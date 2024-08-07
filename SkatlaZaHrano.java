@@ -2,51 +2,49 @@
  * SkatlaZaHrano.java
  *
  * Opis:
- * Delo s škatlo za hrano
+ * Razred za delo s škatlo za hrano.
  * 
- * @author Nikola Dimitriev
- * @version Vaja 35
+ * @autor Nikola Dimitriev
+ * @version Vaja 36 
  */
 
 /**
-* Javni razred za škatlo za hrano, ki je podrazred razreda Skatla.
- * Ta razred dodaja dodatno lastnost, ali škatla vključuje hladilnik za ohranjanje nizke temperature.
+ * Javni razred SkatlaZaHrano za opis škatle za hrano.
  */
 public class SkatlaZaHrano extends Skatla {
-	
-	// Pokaže, ali škatla za hrano vključuje hladilnik
-   private boolean hladilnik;
-	
-	/**
-     * Konstruktor za ustvarjanje objekta SkatlaZaHrano.
+    
+    // Deklaracija privatne lastnosti
+    private boolean hladilnik;
+
+    /**
+     * Konstruktor razreda SkatlaZaHrano.
      * 
-     * @param v    Volumen škatle v cm^3
-     * @param b    Barva škatle
-     * @param vseb Vsebina škatle
-     * @param h    Ali škatla vključuje hladilnik (true ali false)
+     * @param volumen prostornina škatle
+     * @param barva barva škatle
+     * @param vsebina vsebina škatle
+     * @param hladilnik ali je potrebna hramba v hladilniku
      */
-    public SkatlaZaHrano(int v, String b, String vseb, boolean h) {
-        super(v, b, vseb);
-        hladilnik = h;
+    public SkatlaZaHrano(int volumen, String barva, String vsebina, boolean hladilnik) {
+        super(volumen, barva, vsebina);
+        this.hladilnik = hladilnik;
     }
-	
-	 /**
-     * Izpiše informacijo o tem, ali škatla ohranja nizko temperaturo.
-     */
-    public void pokaziTemperaturo() {
-        if (hladilnik) {
-            System.out.println("Škatla za hrano ohranja nizko temperaturo.");
-        } else {
-            System.out.println("Škatla za hrano ne ohranja nizke temperature.");
-        }
-    }
-	
-	 /**
-     * Preveri, ali škatla vsebuje hladilnik.
+
+    /**
+     * Metoda za preverjanje ali škatla potrebuje hrambo v hladilniku.
      * 
-     * @return true, če škatla vsebuje hladilnik; false, če ne
+     * @return true, če škatla potrebuje hrambo v hladilniku, drugače false
      */
     public boolean isHladilnik() {
         return hladilnik;
+    }
+
+    /**
+     * Metoda za prikaz vsebine škatle.
+     * 
+     * @return String, ki predstavlja vsebino škatle
+     */
+    @Override
+    public String prikaziVsebino() {
+        return getVsebina();
     }
 }
